@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;EduCollaborationFrontend/WebContent/c_user/updateProfile.html&apos; to &apos;UpdateProfile.html&apos;" description="Rename resource &apos;updateProfile.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/c_user/updateProfile.html" name="UpdateProfile.html" stamp="1563087035973" updateReferences="true"/>
+</session>

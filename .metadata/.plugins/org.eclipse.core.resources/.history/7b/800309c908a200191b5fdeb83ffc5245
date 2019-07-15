@@ -1,0 +1,19 @@
+package com.coll.restcontroller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.coll.dao.JobDAO;
+
+@RestController
+public class JobRestController 
+{
+	@Autowired
+	JobDAO jobDAO;
+	
+	public  ResponseEntity<String> addJob(@RequestBody Job job)
+	{
+		
+	}
+
+}

@@ -1,0 +1,57 @@
+myApp.controller("UserController",function($scope,$http,$location,$rootScope,$cookieStore)
+{
+	$scope.userDetail={"username":"","password":"","name":"","emailId":"","mobileNo":"","address":"","role":"ROLE_USER"};
+	
+	$scope.register=function()
+	{
+		console.log('I am in Register Function');
+		console.log($scope.userDetail);
+		
+		$http.post('http://localhost:8081/EduCollaborationMiddleware/addUser',$scope.userDetail)
+		.then(function(response){
+			alert("User Added");
+		},function(errresponse){
+			alert("Problem Occurred");
+		});
+	}
+	
+	$scope.checkUser=function()
+	{
+		console.log('I am in checkUser Function');
+		console.log($scope.userDetail);
+		
+		$http.post('http://localhost:8081/EduCollaborationMiddleware/checkUser',$scope.userDetail)
+		.then(function(response)
+		{
+			$rootScope.currentUser=response.data;
+			console.log($rootScope.currentUser);
+			$cookieStore.put('userDetail',response.data);
+			$location.path("/userHome");
+		},function(errresponse)
+		{
+			alert("User Name and Password does not match");
+		});
+	}
+	
+	$scope.editUser=function()
+	{
+		console.log('I am in edit user Function');
+		
+		$http.post('http://localhost:8081/EduCollaborationMiddleware/checkUser',$scope.userDetail)
+		.then(function(response)
+		{
+			
+		});
+	}
+	
+	$scope.logout=function()
+	{
+		console.log('I am in logout Function');
+		
+		$cookieStore.remove('userDetail');
+		delete $rootScope.currentUser;
+		
+		alert("User as logged out");
+		$location.path("/login");
+	}
+});

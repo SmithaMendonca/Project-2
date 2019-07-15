@@ -1,0 +1,7 @@
+package com.coll.restcontroller;
+
+@RestController
+public class JobRestController 
+{
+
+}

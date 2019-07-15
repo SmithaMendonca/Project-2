@@ -1,0 +1,15 @@
+package com.coll.restcontroller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.coll.dao.FriendDAO;
+
+@RestController
+public class FriendRestController
+{
+    @Autowired
+    FriendDAO friendDAO;
+    
+    public ResponseEntity<List<Friend>> showPendingFriendRequest(@PathVariable("username")String username)
+}

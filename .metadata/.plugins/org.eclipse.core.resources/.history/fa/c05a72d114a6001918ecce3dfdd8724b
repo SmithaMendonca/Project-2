@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-cookies.js"></script>
+<script src="RouteConfig.js"></script>
+<script src="c_user/UserController.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">EduCollaboration</a>
+    </div>
+ <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>   
+	  <li ng-show="currentUser==undefined"><a href="#!login">Login</a></li>
+	  <li ng-show="currentUser==undefined"><a href="#!register">Register</a></li>
+	  <li ng-show="currentUser==undefined"><a href="#!aboutUs">About Us</a></li>
+	  <li ng-show="currentUser==undefined"><a href="#!contactUs">Contact Us</a></li>
+	  
+	  <li class="dropdown">
+	    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Blog<span class="caret"></span></a>
+	    <ul class="dropdown-menu">
+	       <li><a class="nav-link" href="#!addBlog" ng-show="currentUser.role=='ROLE_USER'">Add Blog</a></li>
+	       <li><a class="nav-link" href="#!manageBlog" ng-show="currentUser.role=='ROLE_ADMIN'">Manage Blog</a></li>
+	       <li><a class="nav-link" href="#!showBlog">Show Blog</a></li>
+	    </ul>
+	  </li>
+	  
+	  <li class="dropdown">
+	    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Job<span class="caret"></span></a>
+	    <ul class="dropdown-menu">
+	       <li><a class="nav-link" href="#!addBlog" ng-show="currentUser.role=='ROLE_ADMIN'">Publish Job</a></li>
+	       <li><a class="nav-link" href="#!showJobs">Show Jobs</a></li>
+	    </ul>
+	  </li>
+	  
+	  <li ng-hide="currentUser==undefined"><a href="#!friend">Friends</a></li>
+	  
+	   <li ng-hide="currentUser==undefined"><span ng-controller="UserController"><a href="" ng-click="editUser()">Profile Update</a></span></li>
+	  
+	  <li ng-hide="currentUser==undefined"><a href="#!chat">Chat</a></li>	  
+  </ul>
+  
+  <div class="nav navbar-nav navbar-right" ng-hide="currentUser==undefined">
+  	  <font color="white" face="calibri" size="2">
+  	  		Welcome {{currentUser.name}}
+  	  </font>
+  	  <span ng-controller="UserController">
+  	  	<a href="" ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span></a>
+  	  </span>
+  </div>
+  
+ </div>
+</nav>
+<div ng-view></div>
+
+</body>
+</html>
