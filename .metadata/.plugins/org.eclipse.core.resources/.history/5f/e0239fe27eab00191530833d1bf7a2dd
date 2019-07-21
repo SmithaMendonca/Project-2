@@ -1,0 +1,23 @@
+<div ng-controller="BlogController">
+
+<div class="container">
+  
+	<div class="row">
+	    <div class="col-md-5 mx-auto">
+           <div id="first"></div>
+	    </div>
+	     <div id="second">
+	     
+	     <div class="myform form">
+	     
+	     </div>
+	
+	
+	
+	
+	
+	
+	
+ </div>
+</div> 	
+	

@@ -1,0 +1,7 @@
+myApp.controller("FriendController",function($scope,$http,$location,$rootScope)
+{
+	$scope.friend={"friendId":0,"username":"","friendusername":"","status":""};
+	
+	$scope.friendList;
+		
+});

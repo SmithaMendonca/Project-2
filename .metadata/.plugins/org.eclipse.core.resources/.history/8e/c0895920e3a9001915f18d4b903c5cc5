@@ -1,0 +1,27 @@
+package com.coll.dao;
+
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.coll.model.ProfilePicture;
+
+@Repository("profilePictureDAO")
+@Transactional
+public class ProfilePictureDAOImpl implements ProfilePictureDAO
+{
+
+	@Override
+	public boolean addProfilePicture(ProfilePicture profilePicture) 
+	{
+		
+		return false;
+	}
+
+	@Override
+	public ProfilePicture getProfilePicture(String username) 
+	{
+		
+		return null;
+	}
+
+}

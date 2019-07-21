@@ -1,0 +1,5 @@
+myApp.controller("FriendController",function($scope,$http,$location,$rootScope)
+{
+	
+		
+});

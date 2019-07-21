@@ -1,0 +1,42 @@
+<div class="container" ng-controller="BlogCommentController">
+   <div class="row">
+     <div class="main1">
+    	<h3>Blog Comments</h3>
+
+<div>
+  <div class="panel-group" id="accordian">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordian" href="!#{{blog.blogId}}">{{blog.blogName}}</a>
+        </h4>
+      </div>
+      <div id="{{blog.blogId}}" class="panel-collapse collapse">
+        <div class="panel-body">{{blog.blogContent}}</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <table class="table table-bordered">
+    <tr><td colspan="2">
+     <ul type="disc">
+       <li ng-repeat="comment in blogComments">
+           {{comment.username}} &nbsp;&nbsp;&nbsp;&nbsp;
+           {{comment.commentText}} &nbsp;&nbsp;&nbsp;&nbsp;
+           {{comment.commentDate}}
+            <img src="delete.jpg" width="30" height="30" ng-click="deleteComment(comment.commentId)" />
+       </li>    
+     </ul>
+     </td></tr>
+     <tr>
+       <td><textarea cols="30" rows="2" ng-model="blogComment.commentText"></textarea></td>
+        <td><input type="button" value="Send" ng-click="addComment()"/>
+     </tr>
+     </table>
+</div>  
+</div> 
+
+     
+  </div>
+ </div>  
+</div>    

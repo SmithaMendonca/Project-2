@@ -1,0 +1,23 @@
+<div class="container" ng-controller="BlogController">
+   <div class="row">
+     <div class="main1">
+    	<h3>Manage Blog</h3>
+    	
+    	<table class="table table-bordered">
+    	  <tr>
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	</table>    	
+    	</div>    	
+    </div>    	
+</div>

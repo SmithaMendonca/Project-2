@@ -1,0 +1,6 @@
+package com.coll.dao;
+
+public interface ProfilePictureDAO 
+{
+
+}

@@ -1,0 +1,21 @@
+myApp.controller("BlogController",function($scope,$http,$location,$rootScope)
+{
+	$scope.blog={"blogId":0,"blogName":"","blogContent":"","username":"","createDate":"","status":"","likes":0,"dislikes":0};
+	
+	$scope.blogComments;
+	
+	function loadAllComments()
+	{
+		$http.get('http://localhost:8081/EduCollaborationMiddleware/getAllBlogComments/'+$rootScope.blogId)
+		.then(function(response)
+		{
+			$scope.blogComments=response.data;
+		});		
+	}
+	
+	function blogInfo()
+	{
+		
+	}
+	
+});

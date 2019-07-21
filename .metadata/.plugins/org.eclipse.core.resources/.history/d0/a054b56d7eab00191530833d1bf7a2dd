@@ -1,0 +1,24 @@
+<div ng-controller="BlogController">
+
+<div class="container">
+    <h1 class="well">Update Blog</h1>
+	<div class="col-lg-12 well">
+	<div class="row">
+	
+	<div class="col-sm-12">
+         <div class="row">
+	        <div class="col-sm-6 form-group">
+				<label>Blog ID</label>
+					<input type="text" name="userName" ng-model="blog1.blogId"  class="form-control" readonly>
+				</div>
+			  </div>
+	
+	
+	
+	
+	
+	
+	
+ </div>
+</div> 	
+	

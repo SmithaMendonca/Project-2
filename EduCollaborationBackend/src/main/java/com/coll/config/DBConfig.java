@@ -17,6 +17,7 @@ import com.coll.model.Blog;
 import com.coll.model.BlogComment;
 import com.coll.model.Friend;
 import com.coll.model.Job;
+import com.coll.model.ProfilePicture;
 import com.coll.model.UserDetail;
 
 @Configuration
@@ -52,6 +53,7 @@ public class DBConfig {
 		factory.addAnnotatedClass(UserDetail.class);
 		factory.addAnnotatedClass(Job.class);
 		factory.addAnnotatedClass(Friend.class);
+		factory.addAnnotatedClass(ProfilePicture.class);
 		
 		SessionFactory sessionFactory=factory.buildSessionFactory();
 		System.out.println("---Session Factory Object is created---");

@@ -1,0 +1,34 @@
+myApp.controller("FriendController",function($scope,$http,$location,$rootScope)
+{
+	$scope.friend={"friendId":0,"username":"","friendusername":"","status":""};
+	
+	$scope.friendList;
+	
+	$scope.pendingFriendList;
+	
+	$scope.suggestedFriendList;
+	
+	function showFriendList()
+	{
+		console.log('I am in Friend list');
+		
+		$http.get('http://localhost:8081/EduCollaborationMiddleware/showFriendList/'+blogId)
+		.then(function(response){
+			alert("Thank You for liking the blog");
+		},function(errorresponse){
+			alert("Error Occurred while liking the blog");
+		});	
+	}
+	
+	function showPendingFriendList()
+	{
+		
+	}
+	
+	function showSuggestedFriendList()
+	{
+		
+	}
+	
+		
+});

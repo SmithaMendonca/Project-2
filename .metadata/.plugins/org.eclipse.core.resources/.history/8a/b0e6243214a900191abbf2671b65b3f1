@@ -1,0 +1,4 @@
+myApp.controller("BlogController",function($scope,$http,$location,$rootScope)
+{
+	
+});

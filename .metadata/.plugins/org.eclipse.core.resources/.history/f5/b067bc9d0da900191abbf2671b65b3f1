@@ -1,0 +1,18 @@
+<div class="container" ng-controller="BlogController">
+   <div class="row">
+     <div class="main1">
+    	<h3>Show Blog</h3>
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	</div>    	
+    </div>    	
+</div>

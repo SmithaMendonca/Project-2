@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -35,9 +36,10 @@ public class BlogCommentRestController
 	  }	  
   }
   
-  @PostMapping(value="/addComment")
+  @PostMapping(value="/addComment",produces=MediaType.TEXT_PLAIN_VALUE)
   public ResponseEntity<String> addComment(@RequestBody BlogComment comment)
   {
+	  comment.setCommentDate(new java.util.Date());
 	  if(blogCommentDAO.addComment(comment))
 	  {
 		  return new ResponseEntity<String>("Blog Comment added successfully",HttpStatus.OK);
@@ -48,7 +50,7 @@ public class BlogCommentRestController
 	  }
   }
   
-  @GetMapping(value="/deleteComment/{commentId}")
+  @GetMapping(value="/deleteComment/{commentId}",produces=MediaType.TEXT_PLAIN_VALUE)
   public ResponseEntity<String> deleteComment(@PathVariable("commentId")int commentId)
   {
 	  BlogComment comment=blogCommentDAO.getBlogComment(commentId);

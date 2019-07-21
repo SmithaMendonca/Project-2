@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -36,16 +37,11 @@ public class BlogRestController
 	  }
   }
   
-  @PostMapping(value="/addBlog")
+  @PostMapping(value="/addBlog",produces=MediaType.TEXT_PLAIN_VALUE)
   public ResponseEntity<String> addBlog(@RequestBody Blog blog)
-  {
-//	  blog.setUsername("Vinod");
-//	  blog.setBlogName("DevOps");
-//	  blog.setBlogContent("Maven & GitHub");
-//	  blog.setLikes(0);
-//	  blog.setDislikes(0);
-//	  blog.setCreateDate(new java.util.Date());
-//	  blog.setStatus("NA");
+  {	 
+	  blog.setCreateDate(new java.util.Date());
+	  blog.setStatus("NA");
 	  
 	  if(blogDAO.addBlog(blog))
 	  {
@@ -57,7 +53,7 @@ public class BlogRestController
 	  }
   }
   
-  @GetMapping(value="/deleteBlog/{blogId}")
+  @GetMapping(value="/deleteBlog/{blogId}",produces=MediaType.TEXT_PLAIN_VALUE)
   public ResponseEntity<String> deleteBlog(@PathVariable("blogId")int blogId)
   {
 	  Blog blog=(Blog)blogDAO.getBlog(blogId);
@@ -72,7 +68,7 @@ public class BlogRestController
 	  }
   }
   
-  @GetMapping(value="/incrementLikes/{blogId}")
+  @GetMapping(value="/incrementLikes/{blogId}",produces=MediaType.TEXT_PLAIN_VALUE)
   public ResponseEntity<String> incrementLikes(@PathVariable("blogId")int blogId)
   {
 	  if(blogDAO.incrementLikes(blogId))
@@ -85,7 +81,7 @@ public class BlogRestController
 	  }
   }
   
-  @GetMapping(value="/incrementDisLikes/{blogId}")
+  @GetMapping(value="/incrementDisLikes/{blogId}",produces=MediaType.TEXT_PLAIN_VALUE)
   public ResponseEntity<String> incrementDisLikes(@PathVariable("blogId")int blogId)
   {
 	  if(blogDAO.incrementDisLikes(blogId))
@@ -98,7 +94,7 @@ public class BlogRestController
 	  }
   }
   
-  @GetMapping(value="/approveBlog/{blogId}")
+  @GetMapping(value="/approveBlog/{blogId}",produces=MediaType.TEXT_PLAIN_VALUE)
   public ResponseEntity<String> approveBlog(@PathVariable("blogId")int blogId)
   {
 	  Blog blog=(Blog)blogDAO.getBlog(blogId);
@@ -113,7 +109,7 @@ public class BlogRestController
 	  }
   }
   
-  @GetMapping(value="/rejectBlog/{blogId}")
+  @GetMapping(value="/rejectBlog/{blogId}",produces=MediaType.TEXT_PLAIN_VALUE)
   public ResponseEntity<String> rejectBlog(@PathVariable("blogId")int blogId)
   {
 	  Blog blog=(Blog)blogDAO.getBlog(blogId);
@@ -128,7 +124,7 @@ public class BlogRestController
 	  }
   }
   
-  @PostMapping(value="/updateBlog")
+  @PostMapping(value="/updateBlog",produces=MediaType.TEXT_PLAIN_VALUE)
   public ResponseEntity<String> updateBlog(@RequestBody Blog blog)
   {
 	  Blog tempblog=blogDAO.getBlog(blog.getBlogId());

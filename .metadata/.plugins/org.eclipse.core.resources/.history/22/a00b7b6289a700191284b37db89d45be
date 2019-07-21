@@ -1,0 +1,29 @@
+<div ng-controller="BlogController">
+
+<div class="container">
+    <h1 class="well">Publish Blog</h1>
+	<div class="col-lg-12 well">
+	<div class="row">
+	  
+	  <div class="col-sm-12">
+	     <div class="row">
+	        <div class="col-sm-6 form-group">
+				<label>Blog Name</label>
+					<input type="text" name="userName" ng-model="userDetail1.username" placeholder="Enter User Name Here.." class="form-control">
+				</div>
+			  </div>
+			  
+			   <div class="row">   	
+					  <div class="col-sm-6 form-group">
+						<label>Blog Desc</label>
+						<input type="password"  class="form-control" name="password" ng-model="userDetail1.password" placeholder="********" id="pass">
+					  </div>
+					 </div>
+					 
+				<button type="submit" class="btn btn-lg btn-info" ng-click="addBlog()" value="Login">Login</button>					
+			</div>
+			
+	  </div>
+	</div>	
+</div>	
+</div>		 

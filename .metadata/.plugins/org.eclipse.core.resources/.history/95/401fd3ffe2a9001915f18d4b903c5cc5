@@ -1,0 +1,22 @@
+package com.coll.dao;
+
+import com.coll.model.ProfilePicture;
+
+public class ProfilePictureDAOImpl implements ProfilePictureDAO
+{
+
+	@Override
+	public boolean addProfilePicture(ProfilePicture profilePicture) 
+	{
+		
+		return false;
+	}
+
+	@Override
+	public ProfilePicture getProfilePicture(String username) 
+	{
+		
+		return null;
+	}
+
+}

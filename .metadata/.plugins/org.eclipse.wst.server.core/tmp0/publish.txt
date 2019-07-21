@@ -1,5 +1,5 @@
 #Tomcat publish data
-#Mon Jul 15 10:24:19 IST 2019
+#Sun Jul 21 13:33:55 IST 2019
 org.eclipse.jst.j2ee.server\:EduCollaborationMiddleware=C\:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\wtpwebapps\\EduCollaborationMiddleware
 org.eclipse.jst.j2ee.server\:EduCollaborationBackend=C\:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\wtpwebapps\\EduCollaborationMiddleware\\WEB-INF\\lib\\EduCollaborationBackend-0.0.1-SNAPSHOT.jar
 org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\SMITHA\\.m2\\repository\\org\\springframework\\spring-web\\5.0.8.RELEASE\\spring-web-5.0.8.RELEASE.jar=C\:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\wtpwebapps\\EduCollaborationMiddleware\\WEB-INF\\lib\\spring-web-5.0.8.RELEASE.jar

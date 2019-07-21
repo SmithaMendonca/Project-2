@@ -1,0 +1,8 @@
+package com.coll.model;
+
+@Entity
+@Table
+public class ProfilePicture 
+{
+
+}
