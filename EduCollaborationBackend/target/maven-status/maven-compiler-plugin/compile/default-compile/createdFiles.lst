@@ -1,6 +1,8 @@
 com\coll\dao\BlogDAOImpl.class
 com\coll\dao\FriendDAOImpl.class
+com\coll\model\OutputMessage.class
 com\coll\dao\JobDAO.class
+com\coll\model\Message.class
 com\coll\dao\UserDAO.class
 com\coll\dao\FriendDAO.class
 com\coll\dao\ProfilePictureDAOImpl.class

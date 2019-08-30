@@ -25,7 +25,7 @@ public class Job
 	String location;
 	
 	int ctc;
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern="dd-MM-yyyy")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
 	Date lastdateforApply;	
 	String skills;
 	

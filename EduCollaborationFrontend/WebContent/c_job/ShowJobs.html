@@ -1,0 +1,37 @@
+<div class="container" ng-controller="JobController">
+   <div class="row">
+     <div class="main1">
+    	<h3>Job Info</h3>
+
+<div>
+  <div class="panel-group" id="accordian">
+    <div class="panel panel-default" ng-repeat="job in jobs">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordian" href="!#{{job.jobId}}">{{job.designation}}</a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <input type="button" value="Apply" class="btn btn-success"/> 
+        </h4>
+      </div>
+      <div id="{{job.jobId}}" class="panel-collapse collapse">
+        <div class="panel-body">
+           <table class="table table-bordered">
+             <tr>
+                <tr><td>Job Description</td><td>{{job.description}}</td>
+                 <tr><td>Company Name</td><td>{{job.companyName}}</td></tr>
+                 <tr><td>Location</td><td>{{job.location}}</td></tr>
+                 <tr><td>CTC</td><td>{{job.ctc}}/-</td></tr>
+                 <tr><td>LastDate</td><td>{{job.lastdateforApply}}</td></tr>
+                 <tr><td>Skills</td><td>{{job.skills}}</td></tr>
+             </tr>           
+           </table> 
+                  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+      
+  </div>
+ </div>  
+</div>    

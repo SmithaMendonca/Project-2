@@ -1,5 +1,6 @@
 com\coll\restcontroller\FriendRestController.class
 com\coll\restcontroller\UserRestController.class
+com\coll\restcontroller\ChatRestController.class
 com\coll\config\WebResolver.class
 com\coll\restcontroller\BlogCommentRestController.class
 com\coll\restcontroller\JobRestController.class
@@ -7,3 +8,4 @@ com\coll\restcontroller\BlogRestController.class
 com\coll\restcontroller\ProfilePictureRestController.class
 com\coll\config\WebInitializer.class
 com\coll\restcontroller\DemoRestController.class
+com\coll\config\WebSocketConfig.class

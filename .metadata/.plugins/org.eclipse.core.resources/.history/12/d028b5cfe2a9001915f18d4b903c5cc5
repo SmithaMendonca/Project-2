@@ -1,6 +1,0 @@
-package com.coll.dao;
-
-public class ProfilePictureDAOImpl implements ProfilePictureDAO
-{
-
-}

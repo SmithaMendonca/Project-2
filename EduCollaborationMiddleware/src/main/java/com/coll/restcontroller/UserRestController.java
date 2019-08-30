@@ -56,8 +56,8 @@ public class UserRestController
      {
 			 UserDetail tempUser=userDAO.getUserDetail(user.getUsername().toString());
 			 
-			 System.out.println("User Address:"+tempUser.getAddress());
-			 System.out.println("User Address:"+user.getAddress());
+//			 System.out.println("User Address:"+tempUser.getAddress());
+//			 System.out.println("User Address:"+user.getAddress());
 			 
 			 tempUser.setAddress(user.getAddress());
 			 tempUser.setEmailId(user.getEmailId());

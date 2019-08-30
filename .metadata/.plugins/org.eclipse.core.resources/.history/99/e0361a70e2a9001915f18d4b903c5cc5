@@ -1,6 +1,0 @@
-package com.coll.dao;
-
-public interface ProfilePictureDAO 
-{
- public boolean addProfilePicture(ProfilePicture profilePicture);
-}

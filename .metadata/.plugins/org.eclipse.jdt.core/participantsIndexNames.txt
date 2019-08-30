@@ -1,3 +1,5 @@
 INDEX VERSION 1.130
 C:\Users\SMITHA\Project-2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2508415632.index
 \EduCollaborationMiddleware\src\main\resources
+C:\Users\SMITHA\Project-2\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2858811076.index
+\EduCollaborationMiddleware\src\main\java
